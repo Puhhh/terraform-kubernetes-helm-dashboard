@@ -7,7 +7,7 @@ resource "kubernetes_namespace" "helm_dashboard_namespace" {
 resource "argocd_application" "helm_dashboard" {
   count = lower(var.deploy_method) == "argocd" ? 1 : 0
   metadata {
-    name      = var.helm_dashboard_name
+    name      = var.helm_chart_name
     namespace = var.argocd_namespace
   }
   spec {
@@ -31,7 +31,7 @@ resource "argocd_application" "helm_dashboard" {
 resource "helm_release" "helm_dashboard" {
   count      = lower(var.deploy_method) == "helm" ? 1 : 0
   namespace  = kubernetes_namespace.helm_dashboard_namespace.metadata[0].name
-  name       = var.helm_name
+  name       = var.helm_chart_name
   chart      = var.helm_chart_name
   repository = var.helm_chart_repo
   version    = var.helm_chart_version

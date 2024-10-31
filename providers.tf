@@ -6,7 +6,7 @@ terraform {
       version = "~> 2.0"
     }
     argocd = {
-      source  = "oboukili/argocd"
+      source  = "argoproj-labs/argocd"
       version = ">= 1.7.0"
     }
     helm = {

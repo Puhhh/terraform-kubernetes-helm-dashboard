@@ -12,7 +12,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_argocd"></a> [argocd](#provider\_argocd) | 6.2.0 |
+| <a name="provider_argocd"></a> [argocd](#provider\_argocd) | 7.0.3 |
 | <a name="provider_helm"></a> [helm](#provider\_helm) | 2.16.1 |
 | <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | 2.33.0 |
 
@@ -24,7 +24,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [argocd_application.helm_dashboard](https://registry.terraform.io/providers/oboukili/argocd/latest/docs/resources/application) | resource |
+| [argocd_application.helm_dashboard](https://registry.terraform.io/providers/argoproj-labs/argocd/latest/docs/resources/application) | resource |
 | [helm_release.helm_dashboard](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [kubernetes_namespace.helm_dashboard_namespace](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace) | resource |
 
@@ -42,9 +42,7 @@ No modules.
 | <a name="input_helm_chart_version"></a> [helm\_chart\_version](#input\_helm\_chart\_version) | Helm Chart Version | `string` | `"0.1.10"` | no |
 | <a name="input_helm_custom_values"></a> [helm\_custom\_values](#input\_helm\_custom\_values) | Use Helm Custom Values | `bool` | `false` | no |
 | <a name="input_helm_custom_values_path"></a> [helm\_custom\_values\_path](#input\_helm\_custom\_values\_path) | Helm Custom Values Path | `string` | `""` | no |
-| <a name="input_helm_dashboard_name"></a> [helm\_dashboard\_name](#input\_helm\_dashboard\_name) | Helm Dashboard Name | `string` | `"helm-dashboard"` | no |
 | <a name="input_helm_dashboard_namespace"></a> [helm\_dashboard\_namespace](#input\_helm\_dashboard\_namespace) | Helm Dashboard Namespace | `string` | `"helm-dashboard"` | no |
-| <a name="input_helm_name"></a> [helm\_name](#input\_helm\_name) | Helm Release Name | `string` | `"helm-dashboard"` | no |
 | <a name="input_kube_context"></a> [kube\_context](#input\_kube\_context) | Kubernetes Context to Use | `string` | `""` | no |
 | <a name="input_kubeconfig_path"></a> [kubeconfig\_path](#input\_kubeconfig\_path) | Kubeconfig Path | `string` | `"~/.kube/config"` | no |
 | <a name="input_tls_verify_skip"></a> [tls\_verify\_skip](#input\_tls\_verify\_skip) | Skip SelfSigned Certificates Validate | `bool` | `false` | no |
